@@ -7,7 +7,7 @@ Heat-related illnesses (HRIs), including heat cramps, heat exhaustion, and heat 
 
 HRI risk is not limited to traditionally hot climates or summer months. Insufficient acclimatization can increase risk during early-season practices or rehearsals, even in cooler regions. Severe heat stroke is particularly time-sensitive and requires rapid recognition and cooling to prevent organ damage or death. Risk factors include environmental conditions such as heat, humidity, sun exposure, limited airflow, and radiant heat from surfaces, as well as individual and activity-related factors such as dehydration, prior heat illness, inadequate sleep, medications, prolonged exertion, and heat-retaining equipment or uniforms.
 
-Because these factors interact, prevention requires more than hydration. Effective prevention includes gradual acclimatization, environmental monitoring, activity modification, symptom recognition, trained personnel, emergency action plans, and education. This project develops and pilots a self-paced online community health education module to improve HRI prevention, recognition, and response knowledge among high school athletes and marching band members.
+Since these factors interact, prevention requires more than hydration. Effective prevention includes gradual acclimatization, environmental monitoring, activity modification, symptom recognition, trained personnel, emergency action plans, and education. This project develops and pilots a self-paced online community health education module to improve HRI prevention, recognition, and response knowledge among high school athletes and marching band members.
 
 ### Presentations 
 
