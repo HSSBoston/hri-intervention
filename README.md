@@ -9,7 +9,7 @@ HRI risk is not limited to traditionally hot climates or summer months. Insuffic
 
 Since these factors interact, prevention requires more than hydration. Effective prevention includes gradual acclimatization, environmental monitoring, activity modification, symptom recognition, trained personnel, emergency action plans, and education. This project develops and pilots a community health education module to improve HRI prevention, recognition, and response knowledge among high school athletes and marching band members.
 
-### Intervention Design
+### Intervention and Evaluation
 
 <!--
 self-paced online 
