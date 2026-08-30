@@ -1,4 +1,5 @@
 import numpy as np, pandas as pd, matplotlib.pyplot as plt
+from matplotlib.lines import Line2D
 from pathlib import Path 
 from scipy import stats
 
@@ -188,6 +189,51 @@ def drawPanel(data: pd.DataFrame) -> None:
     ax.grid(axis="y", color="#D9DDE1", linewidth=0.65)
     ax.set_axisbelow(True)
 
+    participantHandle = Line2D(
+        [],
+        [],
+        linestyle="none",
+        marker="o",
+        markersize=6,
+        markerfacecolor="#555555",
+        markeredgecolor="white",
+        markeredgewidth=0.6
+    )
+
+    meanCiHandle = ax.errorbar(
+        [np.nan],
+        [np.nan],
+        yerr=[[1], [1]],
+        fmt="D",
+        markersize=5,
+        markerfacecolor="white",
+        markeredgecolor="#555555",
+        markeredgewidth=1.3,
+        ecolor="#555555",
+        elinewidth=1.5,
+        capsize=3.5,
+        capthick=1.2
+    )
+
+    ax.legend(
+        handles=[participantHandle, meanCiHandle],
+        labels=[
+            "Individual participant",
+            "Mean and 95% CI"
+        ],
+        loc="lower center",
+        bbox_to_anchor=(0.5, 0.02),
+        ncol=2,
+        frameon=True,
+        facecolor="white",
+        edgecolor="none",
+        framealpha=0.92,
+        handlelength=1.4,
+        handletextpad=0.5,
+        columnspacing=1.2,
+        borderpad=0.3,
+        fontsize=8
+    )
 #     ax.spines["top"].set_visible(False)
 #     ax.spines["right"].set_visible(False)
 #     for spine in ["left", "bottom"]:
