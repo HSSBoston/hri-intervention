@@ -199,10 +199,10 @@ def drawPanel(data: pd.DataFrame) -> None:
     plt.show()
 
     Path(outputDir).mkdir(parents=True, exist_ok=True)
-    plt.savefig(
-        Path(outputDir, "score-comparison.png"),
+    fig.savefig(
+        outputDir / "score-comparison.png",
         bbox_inches="tight",
-        pad_inches=0 )
+        pad_inches=0.05 )
 
     for group in groups:
         scores = data.loc[data["Group"] == group, "Score"].to_numpy(dtype=float)
