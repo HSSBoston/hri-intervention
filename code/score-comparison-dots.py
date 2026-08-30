@@ -49,7 +49,7 @@ def readScores(csvPath: Path, group: str) -> pd.DataFrame:
         "Group": group,
         "Score": scores } )
 
-# Return the mean and two-sided 95% one-sample t confidence interval.
+# Return the mean and two-sided 95% one-sample t-CI.
 #
 def meanTConfidenceInterval(values: np.ndarray) -> tuple[float, float, float]:
     values = np.asarray(values, dtype=float)
@@ -66,33 +66,35 @@ def meanTConfidenceInterval(values: np.ndarray) -> tuple[float, float, float]:
 #
 def welchDifferenceConfidenceInterval(
     intervention: np.ndarray,
-    control: np.ndarray,
+    control:      np.ndarray,
 ) -> tuple[float, float, float]:
     intervention = np.asarray(intervention, dtype=float)
     control = np.asarray(control, dtype=float)
+    
     interventionCount, controlCount = intervention.size, control.size
+
     interventionVariance = intervention.var(ddof=1)
-    controlVariance = control.var(ddof=1)
+    controlVariance      = control.var(ddof=1)
 
     difference = float(intervention.mean() - control.mean())
+    
     standardError = float(
-        np.sqrt(
-            interventionVariance / interventionCount
-            + controlVariance / controlCount
-        )
-    )
+        np.sqrt( interventionVariance / interventionCount + controlVariance / controlCount ))
+    
     degreesFreedom = (
-        interventionVariance / interventionCount
-        + controlVariance / controlCount
-    ) ** 2 / (
+        interventionVariance / interventionCount + controlVariance / controlCount
+        ) ** 2 / (
         (interventionVariance / interventionCount) ** 2
         / (interventionCount - 1)
         + (controlVariance / controlCount) ** 2
         / (controlCount - 1)
     )
+    
     critical = float(stats.t.ppf(0.975, df=degreesFreedom))
     margin = critical * standardError
-    return difference, difference - margin, difference + margin
+    return (difference,
+            difference - margin,
+            difference + margin )
 
 # Spread tied scores symmetrically without changing their y-values.
 #
@@ -266,4 +268,4 @@ intervention = readScores(interventionFile, "Intervention")
 control      = readScores(controlFile,      "Control")
 
 combined = pd.concat([control, intervention], ignore_index=True)
-#drawPanel(combined)
+drawPanel(combined)
