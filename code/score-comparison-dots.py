@@ -10,8 +10,8 @@ interventionFile = Path(dataDir, "intervention.csv")
 controlFile      = Path(dataDir, "control.csv")
 
 COLORS = {
-    "Intervention": "#0072B2",  # blue
-    "Control":      "#5F6368",  # dark neutral gray
+    "Intervention": "blue",
+    "Control":      "black"
 }
 
 # Extract assessment scores from a given CSV file, validate them, and
@@ -105,6 +105,7 @@ def tiedOffsets(
     offsets = np.zeros(values.size, dtype=float)
 
     for score in np.unique(values):
+        # indices of all elements in values that are equal to score
         indices = np.flatnonzero(values == score)
         if indices.size > 1:
             offsets[indices] = np.linspace(
@@ -141,32 +142,29 @@ def drawPanel(data: pd.DataFrame) -> None:
         ax.scatter(
             pointX,
             scores,
-            s=34,
+            s=34,                # marker size
             color=COLORS[group],
-            edgecolor="white",
-            linewidth=0.6,
-            alpha=0.94,
-            zorder=3,
+            edgecolor="white",   # white outline around each dot
+            linewidth=0.6        # outline width
         )
 
-        mean, lower, upper = meanTConfidenceInterval(scores)
-        summaries[group] = (mean, lower, upper)
+        mean, ciLower, ciUpper = meanTConfidenceInterval(scores)
+        summaries[group] = (mean, ciLower, ciUpper)
         summaryX = x + 0.21
 
         ax.errorbar(
             summaryX,
             mean,
-            yerr=np.array([[mean - lower], [upper - mean]]),
+            yerr=np.array([[mean - ciLower], [ciUpper - mean]]),
             fmt="D",
-            markersize=5.1,
+            markersize=5,
             markerfacecolor="white",
             markeredgecolor=COLORS[group],
             markeredgewidth=1.3,
             ecolor=COLORS[group],
             elinewidth=1.5,
             capsize=3.5,
-            capthick=1.2,
-            zorder=4,
+            capthick=1.2
         )
         ax.annotate(
             f"{mean:.1f}",
@@ -180,81 +178,43 @@ def drawPanel(data: pd.DataFrame) -> None:
             color=COLORS[group],
         )
 
-    ax.set_title(
-        "A   Total questionnaire scores",
-        loc="left",
-        fontweight="bold",
-        pad=7,
-    )
     ax.set_ylabel("Correct responses (0-18)")
     ax.set_xticks(
         [groupX[group] for group in groups],
-        [
-            f"{group}\n(n = {(data['Group'] == group).sum()})"
-            for group in groups
-        ],
-    )
+        [ f"{group}\n(n = {(data["Group"] == group).sum()})" for group in groups ] )
     ax.set_xlim(-0.42, 1.46)
 
-    # The intervention t interval ends at 18.20. Show it rather than clipping
-    # it at the questionnaire's maximum possible score of 18.
-    ax.set_ylim(-0.25, 18.65)
+    ax.set_ylim(0, 19)
     ax.set_yticks(np.arange(0, 19, 3))
     ax.grid(axis="y", color="#D9DDE1", linewidth=0.65)
     ax.set_axisbelow(True)
 
-    ax.spines["top"].set_visible(False)
-    ax.spines["right"].set_visible(False)
-    for spine in ["left", "bottom"]:
-        ax.spines[spine].set_color("#9AA0A6")
-        ax.spines[spine].set_linewidth(0.7)
-    ax.tick_params(axis="both", length=0, pad=4)
-
-    fig.text(
-        0.02,
-        0.045,
-        "Diamond and bar: mean and 95% CI",
-        fontsize=6.8,
-        color="#555555",
-    )
+#     ax.spines["top"].set_visible(False)
+#     ax.spines["right"].set_visible(False)
+#     for spine in ["left", "bottom"]:
+#         ax.spines[spine].set_color("#9AA0A6")
+#         ax.spines[spine].set_linewidth(0.7)
+#     ax.tick_params(axis="both", length=0, pad=4)
 
     plt.show()
-#     outputStem.parent.mkdir(parents=True, exist_ok=True)
-#     fig.savefig(
-#         outputStem.with_suffix(".png"),
-#         dpi=600,
-#         facecolor="white",
-#         bbox_inches="tight",
-#         pad_inches=0.03,
-#     )
-#     fig.savefig(
-#         outputStem.with_suffix(".svg"),
-#         facecolor="white",
-#         bbox_inches="tight",
-#         pad_inches=0.03,
-#     )
     plt.close(fig)
 
     for group in groups:
         scores = data.loc[data["Group"] == group, "Score"].to_numpy(dtype=float)
-        mean, lower, upper = summaries[group]
+        mean, ciLower, ciUpper = summaries[group]
         print(
             f"{group}: n={scores.size}, mean={mean:.3f}, "
             f"SD={scores.std(ddof=1):.3f}, "
-            f"95% CI={lower:.3f} to {upper:.3f}"
+            f"95% CI={ciLower:.3f} to {ciUpper:.3f}"
         )
 
-    control = data.loc[data["Group"] == "Control", "Score"].to_numpy(dtype=float)
-    intervention = data.loc[
-        data["Group"] == "Intervention", "Score"
-    ].to_numpy(dtype=float)
-    difference, lower, upper = welchDifferenceConfidenceInterval(
-        intervention,
-        control,
-    )
+    control      = data.loc[data["Group"] == "Control", "Score"].to_numpy(dtype=float)
+    intervention = data.loc[data["Group"] == "Intervention", "Score"].to_numpy(dtype=float)
+    
+    difference, lower, upper = welchDifferenceConfidenceInterval(intervention, control)
     print(
         "Intervention - control mean difference: "
-        f"{difference:.3f} (Welch 95% CI {lower:.3f} to {upper:.3f})"
+        f"{difference:.3f} (95% CI {lower:.3f} to {upper:.3f})"
     )
 
 
