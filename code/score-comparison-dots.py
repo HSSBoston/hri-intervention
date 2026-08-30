@@ -1,6 +1,5 @@
-import argparse, re
-from pathlib import Path
 import numpy as np, pandas as pd, matplotlib.pyplot as plt
+from pathlib import Path 
 from scipy import stats
 
 projectDir = Path(__file__).parent
@@ -15,30 +14,35 @@ COLORS = {
     "Control":      "#5F6368",  # dark neutral gray
 }
 
-# Read and validate Google Forms scores such as 18/18
+# Extract assessment scores from a given CSV file, validate them, and
+# and return them as a DataFrame
 #
 def readScores(csvPath: Path, group: str) -> pd.DataFrame:
     data = pd.read_csv(csvPath)
     if "Score" not in data.columns:
         raise ValueError(f"{csvPath} has no 'Score' column.")
 
-    pattern = re.compile(r"^\s*(\d+(?:\.\d+)?)\s*/\s*18\s*$")
+    scores = []
 
-    def extractScore(value: object) -> float:
-        match = pattern.fullmatch(str(value))
-        if match is None:
-            raise ValueError(f"Unexpected score in {csvPath}: {value!r}")
-        score = float(match.group(1))
+    for value in data["Score"]:
+        parts = str(value).split("/")
+
+        if len(parts) != 2 or parts[1].strip() != "18":
+            raise ValueError(f"Unexpected score in {csvPath}: {value}")
+
+        try:
+            score = float(parts[0].strip())
+        except ValueError:
+            raise ValueError(f"Unexpected score in {csvPath}: {value}")
+
         if not 0 <= score <= 18:
             raise ValueError(f"Score outside the 0-18 range: {score}")
-        return score
 
-    return pd.DataFrame(
-        {
-            "Group": group,
-            "Score": data["Score"].map(extractScore),
-        }
-    )
+        scores.append(score)
+
+    return pd.DataFrame( {
+        "Group": group,
+        "Score": scores } )
 
 # Return the mean and two-sided 95% one-sample t confidence interval.
 #
