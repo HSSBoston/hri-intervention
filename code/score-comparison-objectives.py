@@ -79,15 +79,14 @@ def readObjectiveResults(csvPath: Path, group: str) -> pd.DataFrame:
     if len(questionColumns) != len(correctAnswers):
         raise ValueError(
             f"Expected {len(correctAnswers)} questionnaire items in {csvPath}; "
-            f"found {len(questionColumns)}."
-        )
+            f"found {len(questionColumns)}.")
 
     responses = data.loc[:, questionColumns]
-    if responses.isna().any().any():
+    if responses.isna().to_numpy().any():
         raise ValueError(f"Missing questionnaire responses in {csvPath}.")
 
-    answerKey     = pd.Series(correctAnswers, index=questionColumns)
-    correctMatrix = responses.eq(answerKey, axis="columns")
+    answerKey      = pd.Series(correctAnswers, index=questionColumns)
+    correctMatrix  = responses.eq(answerKey, axis="columns")
     computedScores = correctMatrix.sum(axis="columns").to_numpy(dtype=float)
     reportedScores = readReportedScores(data["Score"], csvPath)
 
@@ -95,8 +94,7 @@ def readObjectiveResults(csvPath: Path, group: str) -> pd.DataFrame:
         mismatches = np.flatnonzero(computedScores != reportedScores) + 2
         raise ValueError(
             f"Answer-key totals do not match the reported scores in {csvPath} "
-            f"at CSV row(s) {mismatches.tolist()}."
-        )
+            f"at CSV row(s) {mismatches.tolist()}." )
 
     records = []
     questionsPerObjective = 3
@@ -108,8 +106,8 @@ def readObjectiveResults(csvPath: Path, group: str) -> pd.DataFrame:
         percentCorrect = 100 * float(objectiveCorrect.to_numpy().mean())
 
         records.append( {
-            "Group": group,
-            "Objective": objectiveLabel,
+            "Group":          group,
+            "Objective":      objectiveLabel,
             "PercentCorrect": percentCorrect } )
 
     return pd.DataFrame(records)
@@ -127,19 +125,16 @@ def drawPanel(data: pd.DataFrame) -> None:
     # Approximately half of a 6.5-inch text width.
     fig, ax = plt.subplots(figsize=(3.15, 3.05))
 
-    control = (
-        data.loc[data["Group"] == "Control"]
-        .set_index("Objective")
-        .loc[objectiveLabels, "PercentCorrect"]
-        .to_numpy(dtype=float)
-    )
-    intervention = (
-        data.loc[data["Group"] == "Intervention"]
-        .set_index("Objective")
-        .loc[objectiveLabels, "PercentCorrect"]
-        .to_numpy(dtype=float)
-    )
+    controlData = data.loc[
+        (data["Group"] == "Control") & (data["Objective"].isin(objectiveLabels))
+    ].sort_values("Objective")
+    control = controlData["PercentCorrect"].to_numpy(dtype=float)
 
+    interventionData = data.loc[
+        (data["Group"] == "Intervention") & (data["Objective"].isin(objectiveLabels)),
+    ].sort_values("Objective")
+    intervention = InterventionData["PercentCorrect"].to_numpy(dtype=float)
+    
     objectiveY = np.arange(len(objectiveLabels))[::-1]
 
     for objectiveIndex, y in enumerate(objectiveY):
