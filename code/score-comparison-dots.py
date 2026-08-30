@@ -40,6 +40,11 @@ def readScores(csvPath: Path, group: str) -> pd.DataFrame:
 
         scores.append(score)
 
+    # Returns a DataFrame containing scores as rows; e.g.:
+    #        Group  Score
+    # Intervention   18.0
+    # Intervention   18.0
+    # Intervention   14.0
     return pd.DataFrame( {
         "Group": group,
         "Score": scores } )
@@ -256,7 +261,8 @@ def drawPanel(data: pd.DataFrame) -> None:
 
 
 intervention = readScores(interventionFile, "Intervention")
+print(intervention)
 control      = readScores(controlFile,      "Control")
 
 combined = pd.concat([control, intervention], ignore_index=True)
-drawPanel(combined)
+#drawPanel(combined)
