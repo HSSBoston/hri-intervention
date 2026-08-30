@@ -54,11 +54,13 @@ def readScores(csvPath: Path, group: str) -> pd.DataFrame:
 def meanTConfidenceInterval(values: np.ndarray) -> tuple[float, float, float]:
     values = np.asarray(values, dtype=float)
     n = values.size
-    mean = float(values.mean())
+    mean          = float(values.mean())
     standardError = float(stats.sem(values))
-    critical = float(stats.t.ppf(0.975, df=n - 1))
+    critical      = float(stats.t.ppf(0.975, df = n-1))
     margin = critical * standardError
-    return mean, mean - margin, mean + margin
+    return (mean,
+            mean - margin,
+            mean + margin)
 
 # Return intervention-control mean difference and Welch 95% CI.
 #
@@ -261,7 +263,6 @@ def drawPanel(data: pd.DataFrame) -> None:
 
 
 intervention = readScores(interventionFile, "Intervention")
-print(intervention)
 control      = readScores(controlFile,      "Control")
 
 combined = pd.concat([control, intervention], ignore_index=True)
