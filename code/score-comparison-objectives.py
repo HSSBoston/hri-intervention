@@ -123,8 +123,8 @@ def drawPanel(data: pd.DataFrame) -> None:
         "ytick.labelsize": 8 } )
 
     # Approximately half of a 6.5-inch text width.
-    fig, ax = plt.subplots(figsize=(3.15, 3.05))
-
+#     fig, ax = plt.subplots(figsize=(3.15, 3.05))
+    fig, ax = plt.subplots(figsize=(4, 3.05))
     controlData = data.loc[
         (data["Group"] == "Control") & (data["Objective"].isin(objectiveLabels))
     ].sort_values("Objective")
@@ -139,17 +139,12 @@ def drawPanel(data: pd.DataFrame) -> None:
     objectiveY = np.arange(len(objectiveLabels))[::-1]
 
     for objectiveIndex, y in enumerate(objectiveY):
-        lineColor = "#AEB4BA"
-        lineWidth = 1.2
-
         ax.plot(
             [control[objectiveIndex], intervention[objectiveIndex]],
             [y, y],
-            color=lineColor,
-            linewidth=lineWidth,
-            solid_capstyle="round",
-            zorder=1
-        )
+            color="gray",
+            linewidth=1.2,
+            zorder=1 )
 
     ax.scatter(
         control,
@@ -174,30 +169,29 @@ def drawPanel(data: pd.DataFrame) -> None:
 
     for objectiveIndex, y in enumerate(objectiveY):
         ax.annotate(
-            f"{control[objectiveIndex]:.0f}%",
+            f"{control[objectiveIndex]:.0f}",
             xy=(control[objectiveIndex], y),
-            xytext=(0, -8),
+            xytext=(0, -4),
             textcoords="offset points",
             ha="center",
             va="top",
-            fontsize=7,
+            fontsize=8,
             color=colors["Control"]
         )
         ax.annotate(
-            f"{intervention[objectiveIndex]:.0f}%",
+            f"{intervention[objectiveIndex]:.0f}",
             xy=(intervention[objectiveIndex], y),
-            xytext=(0, 7),
+            xytext=(0, 3),
             textcoords="offset points",
             ha="center",
             va="bottom",
-            fontsize=7,
+            fontsize=8,
             color=colors["Intervention"]
         )
 
-    ax.set_xlabel("Correct responses")
+    ax.set_xlabel("Correct responses (%)")
     ax.set_xlim(0, 103)
-    ax.set_xticks(np.arange(0, 101, 25))
-    ax.xaxis.set_major_formatter(PercentFormatter(xmax=100, decimals=0))
+    ax.set_xticks(np.arange(0, 120, 25))
 
     ax.set_yticks(objectiveY, objectiveLabels)
     ax.set_ylim(-0.45, len(objectiveLabels) - 0.55)
@@ -205,14 +199,8 @@ def drawPanel(data: pd.DataFrame) -> None:
     ax.set_axisbelow(True)
 
     ax.legend(
-        loc="lower left",
-        bbox_to_anchor=(0, 1.01),
-        ncol=2,
-        frameon=False,
-        borderaxespad=0,
-        handletextpad=0.4,
-        columnspacing=1.2
-    )
+        loc="upper left",
+        handletextpad=0.4)
 
     fig.tight_layout(pad=0.2)
     plt.show()
@@ -221,8 +209,7 @@ def drawPanel(data: pd.DataFrame) -> None:
     fig.savefig(
         outputDir / "score-comparison-objectives.png",
         bbox_inches="tight",
-        pad_inches=0.05
-    )
+        pad_inches=0.05 )
 
     summary = data.pivot(
         index="Objective",
