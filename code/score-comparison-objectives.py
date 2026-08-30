@@ -142,11 +142,6 @@ def drawPanel(data: pd.DataFrame) -> None:
         lineColor = "#AEB4BA"
         lineWidth = 1.2
 
-        # Make the largest and most important difference slightly more visible.
-        if objectiveIndex == 5:
-            lineColor = "#6FA8D6"
-            lineWidth = 2.0
-
         ax.plot(
             [control[objectiveIndex], intervention[objectiveIndex]],
             [y, y],
@@ -198,23 +193,6 @@ def drawPanel(data: pd.DataFrame) -> None:
             fontsize=7,
             color=colors["Intervention"]
         )
-
-    emergencyIndex = 5
-    emergencyDifference = intervention[emergencyIndex] - control[emergencyIndex]
-    emergencyMidpoint = (
-        intervention[emergencyIndex] + control[emergencyIndex]
-    ) / 2
-    ax.annotate(
-        f"+{emergencyDifference:.0f} pp",
-        xy=(emergencyMidpoint, objectiveY[emergencyIndex]),
-        xytext=(0, 7),
-        textcoords="offset points",
-        ha="center",
-        va="bottom",
-        fontsize=8,
-        fontweight="bold",
-        color=colors["Intervention"]
-    )
 
     ax.set_xlabel("Correct responses")
     ax.set_xlim(0, 103)
