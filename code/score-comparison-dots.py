@@ -129,7 +129,6 @@ def drawPanel(data: pd.DataFrame) -> None:
 
     # Approximately half of a 6.5-inch text width.
     fig, ax = plt.subplots(figsize=(3.15, 3.05))
-    fig.subplots_adjust(left=0.23, right=0.96, top=0.88, bottom=0.25)
 
     summaries: dict[str, tuple[float, float, float]] = {}
 
@@ -196,8 +195,14 @@ def drawPanel(data: pd.DataFrame) -> None:
 #         ax.spines[spine].set_linewidth(0.7)
 #     ax.tick_params(axis="both", length=0, pad=4)
 
+    fig.tight_layout(pad=0.2)
     plt.show()
-    plt.close(fig)
+
+    Path(outputDir).mkdir(parents=True, exist_ok=True)
+    plt.savefig(
+        Path(outputDir, "score-comparison.png"),
+        bbox_inches="tight",
+        pad_inches=0 )
 
     for group in groups:
         scores = data.loc[data["Group"] == group, "Score"].to_numpy(dtype=float)
