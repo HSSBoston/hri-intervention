@@ -87,8 +87,7 @@ def welchDifferenceConfidenceInterval(
         (interventionVariance / interventionCount) ** 2
         / (interventionCount - 1)
         + (controlVariance / controlCount) ** 2
-        / (controlCount - 1)
-    )
+        / (controlCount - 1) )
     
     critical = float(stats.t.ppf(0.975, df=degreesFreedom))
     margin = critical * standardError
@@ -111,8 +110,7 @@ def tiedOffsets(
             offsets[indices] = np.linspace(
                 -maximumWidth / 2,
                 maximumWidth / 2,
-                indices.size,
-            )
+                indices.size )
     return offsets
 
 
@@ -120,19 +118,15 @@ def drawPanel(data: pd.DataFrame) -> None:
     groups = ["Control", "Intervention"]
     groupX = {"Control": 0.0, "Intervention": 1.0}
 
-    plt.rcParams.update(
-        {
-            "font.family": "Arial",
-            "font.size": 8,
-            "axes.titlesize": 10,
-            "axes.labelsize": 9,
-            "xtick.labelsize": 8.5,
-            "ytick.labelsize": 8,
-            "svg.fonttype": "none",  # Keep SVG text editable in Word.
-        }
-    )
+    plt.rcParams.update( {
+        "font.family": "Arial",
+        "font.size": 8,
+        "axes.titlesize": 10,
+        "axes.labelsize": 9,
+        "xtick.labelsize": 8.5,
+        "ytick.labelsize": 8 } )
 
-    # Approximately half of a 6.5-inch proposal text width.
+    # Approximately half of a 6.5-inch text width.
     fig, ax = plt.subplots(figsize=(3.15, 3.05))
     fig.subplots_adjust(left=0.23, right=0.96, top=0.88, bottom=0.25)
 
