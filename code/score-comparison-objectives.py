@@ -215,7 +215,7 @@ def drawPanel(data: pd.DataFrame) -> None:
         index="Objective",
         columns="Group",
         values="PercentCorrect"
-    ).loc[objectiveLabels]
+    ).sort_index()
     summary["Difference"] = summary["Intervention"] - summary["Control"]
     print(summary.round(1).to_string())
 
