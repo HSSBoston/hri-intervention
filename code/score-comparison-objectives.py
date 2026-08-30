@@ -131,10 +131,11 @@ def drawPanel(data: pd.DataFrame) -> None:
     control = controlData["PercentCorrect"].to_numpy(dtype=float)
 
     interventionData = data.loc[
-        (data["Group"] == "Intervention") & (data["Objective"].isin(objectiveLabels)),
+        (data["Group"] == "Intervention") & (data["Objective"].isin(objectiveLabels))
     ].sort_values("Objective")
-    intervention = InterventionData["PercentCorrect"].to_numpy(dtype=float)
+    intervention = interventionData["PercentCorrect"].to_numpy(dtype=float)
     
+    # np.arange(6)[::-1] -> [0, 1, 2, 3, 4, 5][::-1] -> [5, 4, 3, 2, 1, 0]
     objectiveY = np.arange(len(objectiveLabels))[::-1]
 
     for objectiveIndex, y in enumerate(objectiveY):
