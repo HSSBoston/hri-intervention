@@ -10,9 +10,9 @@ outputDir  = projectDir / "output"
 interventionFile = Path(dataDir, "intervention.csv")
 controlFile      = Path(dataDir, "control.csv")
 
-colors = {
-    "Control": "#5F6368",       # dark neutral gray
-    "Intervention": "#0072B2",  # Okabe-Ito colorblind-safe blue
+COLORS = {
+    "Intervention": "#0072B2",  # blue
+    "Control":      "#5F6368",  # dark neutral gray
 }
 
 # Read and validate Google Forms scores such as 18/18
@@ -135,7 +135,7 @@ def drawPanel(data: pd.DataFrame) -> None:
             pointX,
             scores,
             s=34,
-            color=colors[group],
+            color=COLORS[group],
             edgecolor="white",
             linewidth=0.6,
             alpha=0.94,
@@ -153,9 +153,9 @@ def drawPanel(data: pd.DataFrame) -> None:
             fmt="D",
             markersize=5.1,
             markerfacecolor="white",
-            markeredgecolor=colors[group],
+            markeredgecolor=COLORS[group],
             markeredgewidth=1.3,
-            ecolor=colors[group],
+            ecolor=COLORS[group],
             elinewidth=1.5,
             capsize=3.5,
             capthick=1.2,
@@ -170,7 +170,7 @@ def drawPanel(data: pd.DataFrame) -> None:
             va="center",
             fontsize=8,
             fontweight="bold",
-            color=colors[group],
+            color=COLORS[group],
         )
 
     ax.set_title(
