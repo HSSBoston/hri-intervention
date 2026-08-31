@@ -2,7 +2,11 @@
 
 ### Short Summary 
 
-Heat-related illnesses (HRIs), such as heat cramps, heat exhaustion, and heat stroke, pose a preventable but potentially life-threatening risk to high school athletes and marching band members. This project proposes an evidence-based, low-cost educational intervention focused on HRI prevention, recognition, and response among high school athletes and marching band members. The intervention is delivered through a self-paced online educational module. HRI knowledge is assessed among participants randomly assigned to either an intervention or control group. Preliminary results indicate a substantial short-term effect on HRI knowledge and demonstrate online implementation feasibility. 
+Heat-related illnesses (HRIs), such as heat cramps, heat exhaustion, and heat stroke, pose a preventable but potentially life-threatening risk to high school athletes and marching band members. To address this risk, this project proposes an evidence-based, low-cost educational intervention to improve students’ ability to prevent, recognize, and respond to HRIs. 
+
+
+
+The intervention is delivered through a self-paced online educational module. HRI knowledge is assessed among participants randomly assigned to either an intervention or control group. Preliminary results indicate a substantial short-term effect on HRI knowledge and demonstrate online implementation feasibility. 
 
 This project is closely related to the [AlertAthlete](https://github.com/HSSBoston/alertathlete/) project, which develops a machine learning-based algorithm for HRI risk esitmation and implements a supporting wearable device. You may find the [SipLog](https://github.com/HSSBoston/sip-log) project interesting too. 
 
