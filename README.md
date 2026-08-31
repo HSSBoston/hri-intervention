@@ -3,7 +3,7 @@
 ### Short Summary 
 
 
-This project is closely related to the [AlertAthlete](https://github.com/HSSBoston/alertathlete/) project, which develops a machine learning-based algorithm for HRI risk esitmation and implements a supporting wearable device.
+This project is closely related to the [AlertAthlete](https://github.com/HSSBoston/alertathlete/) project, which develops a machine learning-based algorithm for HRI risk esitmation and implements a supporting wearable device. You may find the [SipLog](https://github.com/HSSBoston/sip-log) project interesting too. 
 
 
 ### Extended Summary
