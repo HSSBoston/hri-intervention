@@ -24,10 +24,6 @@ A Heat-Related Illness Education Intervention for High School Athletes and March
 -->
 
 <!--
-self-paced online 
--->
-
-<!--
 ### Presentations 
 -->
 
