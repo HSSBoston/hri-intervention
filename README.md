@@ -22,9 +22,7 @@ Since these factors interact, prevention requires more than hydration. Effective
 
 ### Publications
 
-<!--
-A Heat-Related Illness Education Intervention for High School Athletes and Marching Band Members
--->
+- H. Suzuki, A Heat-Related Illness Education Intervention for High School Athletes and Marching Band Members
 
 <!--
 ### Presentations 
