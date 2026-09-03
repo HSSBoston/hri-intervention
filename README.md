@@ -39,5 +39,5 @@ Last April, I experienced symptoms of heat-related illness (HRO) in a tennis mat
 
 As I researched the issue, I learned that what I had seen on the tennis court was not unusual. Heat risk is not limited to midsummer or hot climates; students can be especially vulnerable early in the season, before their bodies have had time to adjust to the heat. Yet this risk is not always communicated to students; my school and neighboring teams, for example, lack preseason heat-safety education. 
 
+I also found that many student-focused interventions emphasize hydration without fully addressing prevention, early recognition, and emergency response. My own experience, what I saw happen to my teammates, and the gaps I found in existing education ultimately shaped this project: an effort to give students the heat-safety knowledge I wish my teammates and I had received before stepping onto the court.
 
-In the literature, many student interventions still focus mainly on hydration, rather than broader prevention, recognition, and response. These experience, observation, and findings led me to this educational intervention project. 
