@@ -35,7 +35,7 @@ This project is closely related to the [AlertAthlete](https://github.com/HSSBost
 
 ### Personal Context
 
-Last April, I experienced symptoms of heat-related illness (HRO) in a tennis match. One of my teammates developed more severe symptoms and was transported by ambulance for evaluation.  It was not an isolated incident—I have seen HRIs affect teammates across multiple seasons. What surprised me most was that these episodes happened in spring in Massachusetts, not midsummer. 
+Last April, I experienced symptoms of heat-related illness (HRO) in a tennis match. One of my teammates developed more severe symptoms and was transported by ambulance for evaluation.  It was not an isolated incident—I have seen HRIs affect teammates across multiple seasons. What surprised me most was that these episodes happened in spring in Massachusetts, not midsummer. That left me frustrated, but also motivated me to learn more and eventually start this project.
 
 That left me frustrated but also curious to learn more about HRIs and start this project. 
 
