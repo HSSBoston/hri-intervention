@@ -35,3 +35,6 @@ This project is closely related to the [AlertAthlete](https://github.com/HSSBost
 
 ### Personal Context
 
+Last April, I had HRI symptoms in a tennis match. One teammate had more severe symptoms and was transported by ambulance. In fact, HRIs have occurred on my team over multiple seasons. What surprised me was that these episodes happened in spring in Massachusetts—not midsummer. That left me frustrated but also curious to learn more about HRIs and start this project. 
+
+
