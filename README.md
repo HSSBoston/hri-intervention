@@ -37,6 +37,7 @@ This project is closely related to the [AlertAthlete](https://github.com/HSSBost
 
 Last April, I experienced symptoms of heat-related illness (HRO) in a tennis match. One of my teammates developed more severe symptoms and was transported by ambulance for evaluation.  It was not an isolated incident—I have seen HRIs affect teammates across multiple seasons. What surprised me most was that these episodes happened in spring in Massachusetts, not midsummer. That left me frustrated, but also motivated me to learn more and eventually start this project.
 
-That left me frustrated but also curious to learn more about HRIs and start this project. 
+As I researched the issue, I learned that what I had seen on the tennis court was not unusual. Heat risk is not limited to midsummer or hot climates; students can be especially vulnerable early in the season, before their bodies have had time to adjust to the heat. Yet this risk is not always communicated to students; my school and neighboring teams, for example, lack preseason heat-safety education. 
 
-Research and heat-safety guidelines consistently show that heat risk is not limited to midsummer or hot climates. Students can face greater risk before they are acclimatized, including in spring, while record-breaking heat is increasing exposure. Yet this risk is not always communicated to students; my school and neighboring teams, for example, lack preseason heat-safety education. In the literature, many student interventions still focus mainly on hydration, rather than broader prevention, recognition, and response. These experience, observation, and findings led me to this educational intervention project. 
+
+In the literature, many student interventions still focus mainly on hydration, rather than broader prevention, recognition, and response. These experience, observation, and findings led me to this educational intervention project. 
