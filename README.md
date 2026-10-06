@@ -21,8 +21,9 @@ Since these factors interact, prevention requires more than hydration. Effective
 -->
 
 ## Publications
-
+<!--
 - H. Suzuki, A Heat-Related Illness Education Intervention for High School Athletes and Marching Band Members, In *Proc. of Harvard Global Health and Leadership Conference*, September, 2026. [preprint](./doc/harvard-vision26.pdf)
+-->
 
 <!--
 ### Presentations 
