@@ -122,14 +122,15 @@ def drawPanel(data: pd.DataFrame) -> None:
 
     plt.rcParams.update( {
         "font.family": "Arial",
-        "font.size": 8,
-        "axes.titlesize": 10,
-        "axes.labelsize": 9,
-        "xtick.labelsize": 8.5,
-        "ytick.labelsize": 8 } )
+        "font.size": 12,
+        "axes.titlesize": 12,
+        "axes.labelsize": 12,
+        "xtick.labelsize": 11.5,
+        "ytick.labelsize": 11.5,
+        "legend.fontsize": 11 } )
 
     # Approximately half of a 6.5-inch text width.
-    fig, ax = plt.subplots(figsize=(3.15, 3.05))
+    fig, ax = plt.subplots(figsize=(3.5, 3.05))
 
     summaries: dict[str, tuple[float, float, float]] = {}
 
@@ -142,7 +143,7 @@ def drawPanel(data: pd.DataFrame) -> None:
         ax.scatter(
             pointX,
             scores,
-            s=34,                # marker size
+            s=45,                # marker size
             color=COLORS[group],
             edgecolor="white",   # white outline around each dot
             linewidth=0.6        # outline width
@@ -157,7 +158,7 @@ def drawPanel(data: pd.DataFrame) -> None:
             mean,
             yerr=np.array([[mean - ciLower], [ciUpper - mean]]),
             fmt="D",
-            markersize=5,
+            markersize=6,
             markerfacecolor="white",
             markeredgecolor=COLORS[group],
             markeredgewidth=1.3,
@@ -173,7 +174,7 @@ def drawPanel(data: pd.DataFrame) -> None:
             textcoords="offset points",
             ha="left",
             va="center",
-            fontsize=8,
+            fontsize=10,
             fontweight="bold",
             color=COLORS[group],
         )
@@ -194,7 +195,7 @@ def drawPanel(data: pd.DataFrame) -> None:
         [],
         linestyle="none",
         marker="o",
-        markersize=6,
+        markersize=7,
         markerfacecolor="#555555",
         markeredgecolor="white",
         markeredgewidth=0.6
@@ -218,8 +219,8 @@ def drawPanel(data: pd.DataFrame) -> None:
     ax.legend(
         handles=[participantHandle, meanCiHandle],
         labels=[
-            "Individual participant",
-            "Mean and 95% CI"
+            "Participant",
+            "Mean & 95% CI"
         ],
         loc="lower center",
         bbox_to_anchor=(0.5, 0.02),
@@ -232,7 +233,7 @@ def drawPanel(data: pd.DataFrame) -> None:
         handletextpad=0.5,
         columnspacing=1.2,
         borderpad=0.3,
-        fontsize=8
+        fontsize=11.5
     )
 #     ax.spines["top"].set_visible(False)
 #     ax.spines["right"].set_visible(False)
