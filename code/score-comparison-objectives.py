@@ -116,15 +116,16 @@ def readObjectiveResults(csvPath: Path, group: str) -> pd.DataFrame:
 def drawPanel(data: pd.DataFrame) -> None:
     plt.rcParams.update( {
         "font.family": "Arial",
-        "font.size": 8,
-        "axes.titlesize": 10,
-        "axes.labelsize": 9,
-        "xtick.labelsize": 8,
-        "ytick.labelsize": 8 } )
+        "font.size": 12,
+        "axes.titlesize": 12,
+        "axes.labelsize": 12,
+        "xtick.labelsize": 11.5,
+        "ytick.labelsize": 11.5,
+        "legend.fontsize": 11 } )
 
     # Approximately half of a 6.5-inch text width.
 #     fig, ax = plt.subplots(figsize=(3.15, 3.05))
-    fig, ax = plt.subplots(figsize=(4, 3.05))
+    fig, ax = plt.subplots(figsize=(4.3, 3.05))
     controlData = data.loc[
         (data["Group"] == "Control") & (data["Objective"].isin(objectiveLabels))
     ].sort_values("Objective")
@@ -149,7 +150,7 @@ def drawPanel(data: pd.DataFrame) -> None:
     ax.scatter(
         control,
         objectiveY,
-        s=38,
+        s=50,
         color=colors["Control"],
         edgecolor="white",
         linewidth=0.6,
@@ -171,21 +172,21 @@ def drawPanel(data: pd.DataFrame) -> None:
         ax.annotate(
             f"{control[objectiveIndex]:.0f}",
             xy=(control[objectiveIndex], y),
-            xytext=(0, -4),
+            xytext=(0, -5),
             textcoords="offset points",
             ha="center",
             va="top",
-            fontsize=8,
+            fontsize=9.5,
             color=colors["Control"]
         )
         ax.annotate(
             f"{intervention[objectiveIndex]:.0f}",
             xy=(intervention[objectiveIndex], y),
-            xytext=(0, 3),
+            xytext=(-2, 3),
             textcoords="offset points",
             ha="center",
             va="bottom",
-            fontsize=8,
+            fontsize=9.5,
             color=colors["Intervention"]
         )
 
@@ -199,7 +200,7 @@ def drawPanel(data: pd.DataFrame) -> None:
     ax.set_axisbelow(True)
 
     ax.legend(
-        loc="upper left",
+        loc="center left",
         handletextpad=0.4)
 
     fig.tight_layout(pad=0.2)
