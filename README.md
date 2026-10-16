@@ -8,7 +8,7 @@
 
 ## Short Summary 
 
-Heat-related illnesses (HRIs), such as heat cramps, heat exhaustion, and heat stroke, pose a preventable but potentially life-threatening risk to high school athletes and marching band members. To address this risk, this project proposes an evidence-based, low-cost educational intervention to improve students’ ability to prevent, recognize, and respond to HRIs. The intervention uses a 10-minute, self-paced online educational module structured around six evidence-based learning objectives. HRI knowledge is assessed through a randomized controlled experiment comparing intervention and control groups. Preliminary results indicate a substantial short-term effect on HRI knowledge and support the feasibility of online implementation.
+Heat-related illnesses (HRIs), such as heat cramps, heat exhaustion, and heat stroke, pose a preventable but potentially life-threatening risk to high school students who engage in exertional activities. However, targeted HRI education remains limited. This work develops and evaluates a 10-minute, self-paced online educational module structured around six learning objectives derived from published guidance on HRI prevention, recognition, and emergency response. A pilot study tested the module in a randomized controlled experiment with high school athletes and marching band members assigned to intervention and control groups. Preliminary results show a positive short-term effect on HRI knowledge and support the feasibility of low-cost online delivery.
 
 ## Extended Summary
 
