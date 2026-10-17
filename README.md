@@ -14,7 +14,7 @@ Heat-related illnesses (HRIs), such as heat cramps, heat exhaustion, and heat st
 
 Heat-related illnesses (HRIs) range from heat cramps and heat exhaustion to potentially fatal heat stroke. They occur when heat exposure, physical exertion, or both exceed the body’s ability to regulate temperature. Heat stroke can involve central nervous system dysfunction.
 
-HRI risk is amplified during sports and other vigorous activities in hot and humid conditions. HRIs are among the top three causes of athlete deaths. From 2000 to 2024, at least 77 U.S. athletes died from HRIs, including 65 teenagers (84%)13. Over 9,000 high school athletes receive HRI treatment annually. Marching band members face HRI risk in full uniforms while carrying instruments.
+HRI risk is amplified during sports and other vigorous activities in hot and humid conditions. HRIs are among the top three causes of athlete deaths. From 2000 to 2024, at least 77 U.S. athletes died from HRIs, including 65 teenagers (84%). Over 9,000 high school athletes receive HRI treatment annually. Marching band members face HRI risk in full uniforms while carrying instruments.
 
 For both athletes and marching band members, environmental risk factors include high temperature and humidity, direct sun exposure, limited airflow, and radiant heat from sun-heated surfaces (e.g., asphalt and concrete). Other risk factors include insufficient heat acclimatization, dehydration, previous heat illness, poor sleep, intense or prolonged exertion, and heat-trapping uniforms and equipment. Acclimatization is often underestimated; HRIs can occur even before summer in cooler regions. 
 
