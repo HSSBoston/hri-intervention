@@ -8,7 +8,7 @@
 
 ## Short Summary 
 
-Heat-related illnesses (HRIs), such as heat cramps, heat exhaustion, and heat stroke, pose a preventable but potentially life-threatening risk to high school students who engage in exertional activities. However, targeted HRI education remains limited. This work develops and evaluates a 10-minute, self-paced online educational module structured around six learning objectives derived from published guidance on HRI prevention, recognition, and emergency response. A pilot study tested the module in a randomized controlled experiment with high school athletes and marching band members assigned to intervention and control groups. Preliminary results show a positive short-term effect on HRI knowledge and support the feasibility of low-cost online delivery.
+Heat-related illnesses (HRIs), such as heat cramps, heat exhaustion, and heat stroke, pose a preventable but potentially life-threatening risk to high school students who engage in exertional activities. However, targeted HRI education remains limited. This work develops and evaluates a 10-minute, self-paced online educational module structured around six learning objectives derived from published guidance on HRI prevention, recognition, and emergency response. A pilot study tested the module in a randomized controlled trial with high school athletes and marching band members assigned to intervention and control groups. Preliminary results show a positive short-term effect on HRI knowledge and support the feasibility of low-cost online delivery.
 
 ## Extended Summary
 
@@ -20,8 +20,8 @@ HRI risk is not limited to traditionally hot climates or summer months. Insuffic
 Since these factors interact, prevention requires more than hydration. Effective prevention includes gradual acclimatization, environmental monitoring, activity modification, symptom recognition, trained personnel, emergency action plans, and education. This project develops and pilots a community health education module to improve HRI prevention, recognition, and response knowledge among high school athletes and marching band members.
 -->
 
-## Publications
 <!--
+## Publications
 - H. Suzuki, A Heat-Related Illness Education Intervention for High School Athletes and Marching Band Members, In *Proc. of Harvard Global Health and Leadership Conference*, September, 2026. [preprint](./doc/harvard-vision26.pdf)
 -->
 
