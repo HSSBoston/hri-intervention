@@ -12,13 +12,15 @@ Heat-related illnesses (HRIs), such as heat cramps, heat exhaustion, and heat st
 
 ## Extended Summary
 
-<!--
-Heat-related illnesses (HRIs), including heat cramps, heat exhaustion, and heat stroke, occur when heat exposure, physical exertion, or both exceed the body’s ability to regulate temperature. HRIs are a leading cause of athlete deaths, and most victims are teenagers. Beyond fatal cases, thousands of high school athletes are treated each year. Marching band members also face heat risk, especially in full uniforms and while carrying instruments. 
+Heat-related illnesses (HRIs) range from heat cramps and heat exhaustion to potentially fatal heat stroke. They occur when heat exposure, physical exertion, or both exceed the body’s ability to regulate temperature. Heat stroke can involve central nervous system dysfunction.
 
-HRI risk is not limited to traditionally hot climates or summer months. Insufficient acclimatization can increase risk during early-season practices or rehearsals, even in cooler regions. Severe heat stroke is particularly time-sensitive and requires rapid recognition and cooling to prevent organ damage or death. Risk factors include environmental conditions such as heat, humidity, sun exposure, limited airflow, and radiant heat from surfaces, as well as individual and activity-related factors such as dehydration, prior heat illness, inadequate sleep, medications, prolonged exertion, and heat-retaining equipment or uniforms.
+HRI risk is amplified during sports and other vigorous activities in hot and humid conditions. HRIs are among the top three causes of athlete deaths. From 2000 to 2024, at least 77 U.S. athletes died from HRIs, including 65 teenagers (84%)13. Over 9,000 high school athletes receive HRI treatment annually. Marching band members face HRI risk in full uniforms while carrying instruments.
 
-Since these factors interact, prevention requires more than hydration. Effective prevention includes gradual acclimatization, environmental monitoring, activity modification, symptom recognition, trained personnel, emergency action plans, and education. This project develops and pilots a community health education module to improve HRI prevention, recognition, and response knowledge among high school athletes and marching band members.
--->
+For both athletes and marching band members, environmental risk factors include high temperature and humidity, direct sun exposure, limited airflow, and radiant heat from sun-heated surfaces (e.g., asphalt and concrete). Other risk factors include insufficient heat acclimatization, dehydration, previous heat illness, poor sleep, intense or prolonged exertion, and heat-trapping uniforms and equipment. Acclimatization is often underestimated; HRIs can occur even before summer in cooler regions. 
+
+Since these factors interact, prevention requires more than hydration alone. It also involves gradual acclimatization, environmental monitoring, adjusted activity intensity and work-to-rest ratios, symptom recognition, and emergency action plans that specify rapid cooling before transport for suspected heat stroke4,5. The American Academy of Pediatrics recommends regularly educating students about acclimatization, hydration, honest symptom reporting, recovery, and rest.
+
+This work develops a community health intervention focused on HRI prevention, recognition, and emergency response among high school athletes and marching band members. It is delivered through a self-paced online educational module and evaluated through a randomized controlled trial. 
 
 <!--
 ## Publications
