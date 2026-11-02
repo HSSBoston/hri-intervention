@@ -23,7 +23,7 @@ Since these factors interact, prevention requires more than hydration alone. It 
 This work develops a community health intervention focused on HRI prevention, recognition, and emergency response among high school athletes and marching band members. It is delivered through a self-paced online educational module and evaluated through a randomized controlled trial. 
 
 ## Publications
-- Hanna Suzuki, "Heat Illness Education in High School Sports and Marching Bands", In Proc. of 14th International Young Researchers' Conference (IYRC), oral presentation paper, January 2027. publisher page, [preprint](./doc/iyrc26hri-intervention.pdf)
+- Hanna Suzuki, "Heat Illness Education in High School Sports and Marching Bands", In *Proc. of 14th International Young Researchers' Conference (IYRC)*, oral presentation paper, January 2027. publisher page, [preprint](./doc/iyrc26hri-intervention.pdf)
 
 <!--
 ### Presentations 
