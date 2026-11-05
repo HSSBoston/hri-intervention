@@ -23,10 +23,10 @@ Since these factors interact, prevention requires more than hydration alone. It 
 This work develops a community health intervention focused on HRI prevention, recognition, and emergency response among high school athletes and marching band members. It is delivered through a self-paced online educational module and evaluated through a randomized controlled trial. 
 
 <p align="center">
-  <img src="./images/module-first.jpg" width="400" />
-  <img src="./images/module-prevention.jpg" width="400" />
-  <img src="./images/module-symptoms.jpg" width="400" />
-  <img src="./images/module-heat-stroke.jpg" width="400" />
+  <img src="./images/module-first.jpg" width="300" />
+  <img src="./images/module-prevention.jpg" width="300" />
+  <img src="./images/module-symptoms.jpg" width="300" />
+  <img src="./images/module-heat-stroke.jpg" width="300" />
 </p>
 
 ## Publications
