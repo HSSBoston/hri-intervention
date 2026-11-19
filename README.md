@@ -10,6 +10,8 @@
 
 Heat-related illnesses (HRIs), such as heat cramps, heat exhaustion, and heat stroke, pose a preventable but potentially life-threatening risk to high school students who engage in exertional activities. However, targeted HRI education remains limited. This work develops and evaluates a 10-minute, self-paced online educational module structured around six learning objectives derived from published guidance on HRI prevention, recognition, and emergency response. A pilot study tested the module in a randomized controlled trial with high school athletes and marching band members assigned to intervention and control groups. Preliminary results show a positive short-term effect on HRI knowledge and support the feasibility of low-cost online delivery.
 
+This project was carried out in summer 2026 as part of the ACComPLISHED Community Health Program offered by Columbia University's Department of Neurology. 
+
 ## Extended Summary
 
 Heat-related illnesses (HRIs) range from heat cramps and heat exhaustion to potentially fatal heat stroke. They occur when heat exposure, physical exertion, or both exceed the body’s ability to regulate temperature. Heat stroke can involve central nervous system dysfunction.
