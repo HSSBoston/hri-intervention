@@ -32,7 +32,7 @@ This work develops a community health intervention focused on HRI prevention, re
 </p>
 
 ## Publications
-- Hanna Suzuki, "Heat Illness Education in High School Sports and Marching Bands", In *Proc. of 14th International Young Researchers' Conference (IYRC)*, oral presentation paper, January 2027. publisher page, [preprint](./doc/iyrc26hri-intervention.pdf)
+- Hanna Suzuki, "Heat Illness Education in High School Sports and Marching Bands", In *Proc. of 14th International Young Researchers' Conference (IYRC)*, oral presentation paper, January 2027. publisher page, [preprint](./doc/iyrc26hri-intervention.pdf), presentation slides. 
 
 
 ## Relevant Projects
